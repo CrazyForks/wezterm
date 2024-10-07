@@ -63,6 +63,8 @@ As features stabilize some brief notes about them will accumulate here.
 * [show_close_tab_button_in_tabs](config/lua/config/show_close_tab_button_in_tabs.md)
   option for the fancy tab bar. Thanks to @zummenix! #3818
 * wezterm-ssh now supports `ProxyUseFdPass`. Thanks to @loops! #6103 #6093
+* `PromptInputLine` now supports a optional `prompt` and `initial_value`
+  parameters. Thanks to @mgpinf and @ekorchmar! #6054 #6007
 
 #### Fixed
 * Race condition when very quickly adjusting font scale, and other improvements
@@ -128,6 +130,10 @@ As features stabilize some brief notes about them will accumulate here.
   @joncrangle! #5883
 * zooming a tab might not work if you also recently used `pane:activate()`.
   Thanks to @SpyMachine! #5964 #5928
+* `pane:current_working_dir.file_path` returned incorrect results for
+  paths that contained `#` or `?` characters. Thanks to @loops! #6158 #6171
+* wayland: issues with losing maximized or tiled state when switching between
+  applications. Thanks to @aliaksandr-trush! #4568 #5897
 
 #### Updated
 * Bundled conpty.dll and OpenConsole.exe to build 1.19.240130002.nupkg
